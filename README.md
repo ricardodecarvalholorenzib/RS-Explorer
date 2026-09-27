@@ -72,7 +72,7 @@ RS-Explorer/
 ├── core/
 │   ├── __init__.py
 │   └── filesystem.py
-├── requirements
+├── requirements.txt
 └── README.md
 ```
 
@@ -121,7 +121,7 @@ cd RS-Explorer
 Install the dependency:
 
 ```bash
-pip install rich
+pip install -r requirements.txt
 ```
 
 Run the project:
