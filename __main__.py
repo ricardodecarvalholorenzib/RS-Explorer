@@ -1,18 +1,15 @@
-from rich.panel import Panel
+from core.filesystem import File, FileSystem
+from cmd.slash import Commands
 from rich.console import Console
 from rich.table import Table
 from rich import box
-from cmd.cmd import clear
-from core.filesystem import FileSystem, File
-
-fs = FileSystem()
 
 console = Console()
 
 def show_files(fs):
     table = Table(
         title="📋 RS Explorer",
-        border_style="blue", 
+        border_style="blue",
         box=box.DOUBLE,
         show_lines=True,
         expand=True
@@ -34,38 +31,42 @@ def show_files(fs):
 
     console.print(table)
 
-while True:
-    show_files(fs)
+def init():
 
-    option = input("> ").lower()
+    fs = FileSystem()
+    commands = Commands(fs)
 
-    if option.startswith("/createfile"):
-        from control.create_file import create_file_command
-        
-        create_file_command(option, fs)
-        clear()
+    while True:
 
-    elif option.startswith("/openfile"):
-        from control.open_file import open_file_command
-        open_file_command(option, fs)
+        show_files(fs)
 
-    elif option.startswith("/clear"):
-        clear()
+        option = commands.get_option()
 
-    elif option.startswith("/createfolder"):
-        from control.create_folder import create_folder_command
+        if commands.exit(option):
+            break
 
-        create_folder_command(option, fs)
-        clear()
+        if commands.create_file(option):
+            continue
 
-    elif option.startswith("/help"):
-        from assistance.help import help
+        if commands.open_file(option):
+            continue
 
-        help()
-        clear()
+        if commands.clear_screen(option):
+            continue
 
-    elif option.startswith("/exit"):
-        break
+        if commands.create_folder(option):
+            continue
 
-    else:
-        console.print(Panel(f"\n[bright_red]TypeError[/]: [red]cannot find command '{option}'. Use '/help' to see all the available commands[/]", style="#FF5C40", title="Error", border_style="red"))
+        if commands.show_help(option):
+            continue
+
+        if commands.open_folder(option):
+            continue
+
+        if commands.back(option):
+            continue
+
+        else:
+            commands.error(option)
+
+init()
