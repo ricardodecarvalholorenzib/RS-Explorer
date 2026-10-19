@@ -8,7 +8,7 @@ class Commands:
         self.console = Console()
 
     def get_option(self):
-        return input("> ").lower()
+        return input("> ").strip()
 
     def create_file(self, option):
         if option.startswith("/createfile"):
