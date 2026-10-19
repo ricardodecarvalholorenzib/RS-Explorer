@@ -70,13 +70,13 @@ After running /openfile --<file_name>, use one of these commands at the prompt:
 
 ## Example Session
 
-/createfolder --school
-/openfolder --school
-/createfile --notes.txt --Review math before Friday
-/openfile --notes.txt
-/editfilecontent --notes.txt
-/back
-/exit
+/createfolder --school <br>
+/openfolder --school <br>
+/createfile --notes.txt --Review math before Friday <br>
+/openfile --notes.txt <br> 
+/editfilecontent --notes.txt <br>
+/back <br>
+/exit <br>
 
 ---
 
