@@ -82,35 +82,35 @@ After running /openfile --<file_name>, use one of these commands at the prompt:
 
 ## Project Structure
 
-RS-Explorer/
-├── main.py
-├── assistance/
-│   └── help.py
-├── cmd/
-│   ├── __init__.py
-│   ├── cmd.py
-│   └── slash.py
-├── control/
-│   ├── __init__.py
-│   ├── create_file.py
-│   ├── create_folder.py
-│   ├── delete.py
-│   ├── edit.py
-│   ├── open_file.py
-│   ├── open_folder.py
-│   ├── rename.py
-│   └── view.py
-├── core/
-│   ├── __init__.py
-│   └── filesystem.py
-├── requirements.txt
-└── README.md
+RS-Explorer/ <br>
+├── main.py <br> 
+├── assistance/ <br>
+│   └── help.py <br>
+├── cmd/ <br>
+│   ├── __init__.py <br>
+│   ├── cmd.py <br>
+│   └── slash.py <br>
+├── control/ <br>
+│   ├── __init__.py <br>
+│   ├── create_file.py <br>
+│   ├── create_folder.py <br>
+│   ├── delete.py <br>
+│   ├── edit.py <br>
+│   ├── open_file.py <br>
+│   ├── open_folder.py <br>
+│   ├── rename.py <br>
+│   └── view.py <br>
+├── core/<br>
+│   ├── __init__.py<br>
+│   └── filesystem.py<br>
+├── requirements.txt<br>
+└── README.md<br>
 
-- core/ — Virtual file and folder models, plus file-system operations.
-- cmd/ — Terminal utilities and slash-command dispatch.
-- control/ — Handlers for creating, opening, editing, renaming, and deleting virtual items.
-- assistance/ — Built-in help interface.
-- main.py — Application entry point and directory listing.
+- core/ — Virtual file and folder models, plus file-system operations.<br>
+- cmd/ — Terminal utilities and slash-command dispatch.<br>
+- control/ — Handlers for creating, opening, editing, renaming, and deleting virtual items.<br>
+- assistance/ — Built-in help interface.<br>
+- main.py — Application entry point and directory listing.<br>
 
 ---
 
