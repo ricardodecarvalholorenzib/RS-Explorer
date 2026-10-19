@@ -138,9 +138,3 @@ RS Explorer is a learning project for practicing:
 - Modular architecture design.
 - Command parsing and terminal user interfaces.
 - Incremental software development.
-
----
-
-## License
-
-No license has been added to this repository yet. Unless a license is added, reuse and redistribution rights are not automatically granted.
