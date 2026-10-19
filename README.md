@@ -82,24 +82,24 @@ After running /openfile --<file_name>, use one of these commands at the prompt:
 
 ## Project Structure
 
-RS-Explorer/ <br>
-├── main.py <br> 
-├── assistance/ <br>
-│   └── help.py <br>
-├── cmd/ <br>
-│   ├── __init__.py <br>
-│   ├── cmd.py <br>
-│   └── slash.py <br>
-├── control/ <br>
-│   ├── __init__.py <br>
-│   ├── create_file.py <br>
-│   ├── create_folder.py <br>
-│   ├── delete.py <br>
-│   ├── edit.py <br>
-│   ├── open_file.py <br>
-│   ├── open_folder.py <br>
-│   ├── rename.py <br>
-│   └── view.py <br>
+RS-Explorer/<br>
+├── main.py<br> 
+├── assistance/<br>
+│   └── help.py<br>
+├── cmd/<br>
+│   ├── __init__.py<br>
+│   ├── cmd.py<br>
+│   └── slash.py<br>
+├── control/<br>
+│   ├── __init__.py<br>
+│   ├── create_file.py<br>
+│   ├── create_folder.py<br>
+│   ├── delete.py<br>
+│   ├── edit.py<br>
+│   ├── open_file.py<br>
+│   ├── open_folder.py<br>
+│   ├── rename.py<br>
+│   └── view.py<br>
 ├── core/<br>
 │   ├── __init__.py<br>
 │   └── filesystem.py<br>
